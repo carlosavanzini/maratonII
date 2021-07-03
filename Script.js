@@ -81,7 +81,7 @@ function concatenar () {
         console.log("Días de alojamiento: " + dias[i] + " factura total: $" + facturaciontotal[i]);
        
         
-        total = total + facturaciontotal[i];
+        total = total + facturaciontotal[i]
 
     }
     console.log("La facturación total del día es: $" + total);
