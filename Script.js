@@ -77,6 +77,7 @@ function concatenar () { // esta funcion lo que hace es concatenar los arrays pa
             total = total + facturaciontotal[i]}
 
             alert(`Reporte de hotel Matrix:\nLa facturación total es: ${total}$\nListado de huéspedes: ${huesped.toString()}\nLa habitación reservada es: ${habitaciones.toString()}`);
+            console.log(`Reporte de hotel Matrix:\nLa facturación total es: ${total}$\nListado de huéspedes: ${huesped.toString()}\nLa habitación reservada es: ${habitaciones.toString()}`);
     }
 concatenar();
 
