@@ -19,8 +19,7 @@ let desayuno = 90;
 
 while (confirma != false) {
     ingreso(name1,room,days);
-    confirma = confirm("Si desea seguir cargando clientes, ingrese Aceptar.");
-    
+    confirma = confirm("Si desea seguir cargando clientes, ingrese Aceptar."); 
 } 
 function ingreso (name1,room,days) {
     
