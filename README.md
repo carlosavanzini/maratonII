@@ -10,9 +10,9 @@ Funcionamiento del programa
 -La habitacion standard tiene la opcion de preguntarle al cliente si desea un desayuno diario de 90 pesos, este monto no entra en el descuento de 10
 % pasado los 6 dias
 -Una vez cancelado la carga de clientes, por pantalla nos mostrara un reporte del hotel que se basa en:
- -total de la facturacion
- -los clientes alojados
- -habitaciones escogidas
+ -Total de la facturacion
+ -Los clientes alojados
+ -Habitaciones escogidas
 
 -tambien por medio de console nos mostrara un detalle mas especifico por cliente, nombre, habitacion, dias.
 
