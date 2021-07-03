@@ -19,14 +19,9 @@ let desayuno = 90;
 
 while (confirma != false) {
     ingreso(name1,room,days);
-    descuento();
-    concatenar();
     confirma = confirm("Si desea seguir cargando clientes, ingrese Aceptar.");
     
 } 
-
-
-
 function ingreso (name1,room,days) {
     
     name1 = prompt("Ingrese el nombre del huesped");
@@ -36,70 +31,63 @@ function ingreso (name1,room,days) {
     dias.push(days);
     habitaciones.push(room);
     
-    
-    if (room === "standard" ) {
-        valor = (days * standard);
-        preguntar = parseInt(prompt("¿Desea desayuno? son $90 por noche. \n 1) Si \n 2) No"));
-        if (preguntar === 1) {
-             valor = ((desayuno * days) + valor);
-             
-
-        }
-
-    }   if (room === "doble" ) {
-        valor = (days * doble);
-        
-
-    }   if (room === "triple" ) {
-        valor = (days * triple);
-        
-
-    }   if (room === "suite" ) {
-        valor = (days * suite);
-        
-
-    } 
-    facturaciontotal.push(valor);
-    return valor
+    switch (room) {
+        case "standard":
+            preguntar=parseInt(prompt("¿Desea desayuno adicional por $90 diario?\n1Si\n2No"));
+            if(days>5){
+            valor = (days * standard)*0.9}
+            else{
+                valor = (days * standard)
+            }
+            if(preguntar===1){
+                valor = valor + desayuno*days;
+            }
+            facturaciontotal.push(valor);
+        break;
+        case "doble":
+                if(days>5){
+                valor = (days * doble)*0.9}
+                else{
+                    valor = (days * doble)
+                }
+                facturaciontotal.push(valor);
+            break;
+        case "triple":
+                if (days>5) {
+                    valor = (days * triple)*0.9
+                } else {
+                    valor = (days * triple)
+                } 
+                facturaciontotal.push(valor);
+            break;
+        case "suite":
+            if (days>5) {
+                valor = (days * suite)*0.9
+            } else {
+                valor = (days * suite)
+            }
+                facturaciontotal.push(valor);
+            break;
+        default:
+            break;
+    }
+   
     
 } 
-
-
-
-
-function descuento () {
-    for (let i = 0; i < dias.length; i++) {
-        
-        if (dias[i] > 5) {
-            return valor - (valor * 0.1);
-        } 
-    }
-
-}
-
-
 
 function concatenar () {
 
     for (let i = 0 ; i < huesped.length ; i++) {
         console.log("Días de alojamiento: " + dias[i] + " factura total: $" + facturaciontotal[i]);
-        console.log("La habitación: " + (i+1) + " es: " + habitaciones[i]);
+       
         
         total = total + facturaciontotal[i];
-        
+
     }
     console.log("La facturación total del día es: $" + total);
     console.log("Listado de huéspedes del día: " + huesped.toString());
+    console.log("La habitación reservada es: " + habitaciones.toString());
     
 }
+concatenar();
 
-
-
-
-/* -Valor por noche por de habitación:
-* Standard: $2500
-* Doble: $3300
-* Triple: $4300
-* Suite: $7250
--Si tiene más de 5 noches, se realiza un 10% de descuento.
--Si es Standard, se le pregunta si quiere desayuno. Tiene un costo adicional de $90 por noche. */ 
