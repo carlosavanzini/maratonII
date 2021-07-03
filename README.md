@@ -14,5 +14,5 @@ Funcionamiento del programa
  -Los clientes alojados
  -Habitaciones escogidas
 
--tambien por medio de console nos mostrara un detalle mas especifico por cliente, nombre, habitacion, dias.
+-Tambien por medio de console nos mostrara un detalle mas especifico por cliente, nombre, habitacion, dias.
 
