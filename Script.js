@@ -1,4 +1,4 @@
-alert("Bienvenido al hotel K-K");
+alert("Bienvenido al hotel MATRIX");
 
 let habitaciones = [];
 let dias = []
@@ -22,7 +22,6 @@ while (confirma != false) {
     confirma = confirm("Si desea seguir cargando clientes, ingrese Aceptar."); 
 } 
 function ingreso (name1,room,days) {
-    
     name1 = prompt("Ingrese el nombre del huesped");
     room = prompt("Ingrese el tipo de habitación en que desea alojarse" + "\n  Standard \n  Doble \n  Triple \n  Suite").toLowerCase();
     days = parseInt(prompt("¿Cuántos días desea alojarse?"));
@@ -71,22 +70,13 @@ function ingreso (name1,room,days) {
             break;
     }
    
-    
 } 
-
 function concatenar () {
-
     for (let i = 0 ; i < huesped.length ; i++) {
-        console.log("Días de alojamiento: " + dias[i] + " factura total: $" + facturaciontotal[i]);
-       
-        
-        total = total + facturaciontotal[i]
+            console.log(`Cliente: ${huesped[i]}, Días de alojamiento: ${dias[i]}, Habitación elegida: ${habitaciones[i]}, factura total: ${facturaciontotal[i]}$`);
+            total = total + facturaciontotal[i]}
 
+            alert(`Reporte de hotel Matrix:\nLa facturación total es: ${total}$\nListado de huéspedes: ${huesped.toString()}\nLa habitación reservada es: ${habitaciones.toString()}`);
     }
-    console.log("La facturación total del día es: $" + total);
-    console.log("Listado de huéspedes del día: " + huesped.toString());
-    console.log("La habitación reservada es: " + habitaciones.toString());
-    
-}
 concatenar();
 
