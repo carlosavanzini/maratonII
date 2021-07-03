@@ -17,11 +17,11 @@ let valor;
 let preguntar;
 let desayuno = 90;
 
-while (confirma != false) {
+while (confirma != false) {// un while para que siga cargando clientes hasta que el empleado cancele la carga
     ingreso(name1,room,days);
     confirma = confirm("Si desea seguir cargando clientes, ingrese Aceptar."); 
 } 
-function ingreso (name1,room,days) {
+function ingreso (name1,room,days) {//esta funcion la generamos para que el administrador llene los datos de los clientes
     name1 = prompt("Ingrese el nombre del huesped");
     room = prompt("Ingrese el tipo de habitación en que desea alojarse" + "\n  Standard \n  Doble \n  Triple \n  Suite").toLowerCase();
     days = parseInt(prompt("¿Cuántos días desea alojarse?"));
@@ -71,7 +71,7 @@ function ingreso (name1,room,days) {
     }
    
 } 
-function concatenar () {
+function concatenar () { // esta funcion lo que hace es concatenar los arrays para ir mostrando los datos
     for (let i = 0 ; i < huesped.length ; i++) {
             console.log(`Cliente: ${huesped[i]}, Días de alojamiento: ${dias[i]}, Habitación elegida: ${habitaciones[i]}, factura total: ${facturaciontotal[i]}$`);
             total = total + facturaciontotal[i]}
