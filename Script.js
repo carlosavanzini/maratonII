@@ -1,4 +1,4 @@
-alert("Bienvenido al hotel MATRIX");
+alert("Bienvenidos Hotel MATRIX");
 
 let habitaciones = [];
 let dias = []
@@ -28,8 +28,7 @@ function ingreso (name1,room,days) {//esta funcion la generamos para que el admi
     huesped.push(name1);
     dias.push(days);
     habitaciones.push(room);
-    
-    switch (room) {
+     switch (room) {
         case "standard":
             preguntar=parseInt(prompt("¿Desea desayuno adicional por $90 diario?\n1Si\n2No"));
             if(days>5){
